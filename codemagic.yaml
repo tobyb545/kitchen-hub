@@ -70,11 +70,14 @@ workflows:
           # The app and its embedded Share extension are separate App IDs, so each needs its
           # own App Store profile. Both use the same distribution certificate.
           # --strict-match-identifier stops the app's ID also matching the extension's.
+          # --delete-stale-profiles: changing an App ID's capabilities (e.g. App Groups)
+          # invalidates its existing profiles; this removes them so fresh ones are made.
           for id in "$BUNDLE_ID" "$SHARE_BUNDLE_ID"; do
             app-store-connect fetch-signing-files "$id" \
               --type IOS_APP_STORE \
               --certificate-key "@env:CERTIFICATE_PRIVATE_KEY" \
               --strict-match-identifier \
+              --delete-stale-profiles \
               --create
           done
 
