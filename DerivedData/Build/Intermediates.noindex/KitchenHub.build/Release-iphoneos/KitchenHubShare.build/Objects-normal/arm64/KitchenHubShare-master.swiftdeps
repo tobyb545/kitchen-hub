@@ -1,7 +1,0 @@
-version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
-options: "a5f183d508c69700a7316a3c29b7a850492caba94b6b01bb7c53f67caf9bb6f6"
-build_start_time: [1794756889, 26894000]
-build_end_time: [1794756898, 23953000]
-inputs:
-  "/Users/Test/KitchenHub/KitchenHubShare/ShareViewController.swift": [1794755173, 381362438]
-  "/Users/Test/KitchenHub/Shared/ImportInbox.swift": [1794755087, 805648176]

@@ -40,7 +40,7 @@ workflows:
         XCODE_SCHEME: "KitchenHub"
         # Kitchen Hub's numeric App Store Connect Apple ID
         # (App Store Connect > your app > App Information > "Apple ID").
-        APP_STORE_CONNECT_APP_ID: "REPLACE_ME"
+        APP_STORE_CONNECT_APP_ID: "6835135117"
         APPLE_TEAM_ID: "7KYR2X9MJA"
         BUNDLE_ID: "com.tobyblunt.kitchenhub"
         SHARE_BUNDLE_ID: "com.tobyblunt.kitchenhub.share"

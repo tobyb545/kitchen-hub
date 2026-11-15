@@ -1,9 +1,0 @@
-"/Users/Test/KitchenHub/KitchenHub/Views/Components.swift":
-  abi-baseline-json: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub.abi.json"
-  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.d"
-  swiftmodule: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub.swiftmodule"
-  objc-header: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-Swift.h"
-  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.swiftconstvalues"
-  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.dia"
-  swiftdoc: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub.swiftdoc"
-  swiftsourceinfo: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub.swiftsourceinfo"
