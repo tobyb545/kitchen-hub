@@ -1,0 +1,1 @@
+@rpath/KitchenHub.debug.dylib

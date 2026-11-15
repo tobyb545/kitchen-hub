@@ -1,0 +1,180 @@
+{
+  "" : {
+    "const-values" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.swiftconstvalues",
+    "dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.d",
+    "diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.dia",
+    "emit-module-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master-emit-module.dia",
+    "swift-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHub-master.swiftdeps"
+  },
+  "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/App/HubModel.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HubModel.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HubModel.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HubModel.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/App/KitchenHubApp.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHubApp.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHubApp.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/KitchenHubApp.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/App/RootView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RootView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RootView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RootView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Models/MoodScene.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/MoodScene.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/MoodScene.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/MoodScene.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Models/Recipe.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Recipe.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Recipe.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Recipe.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Models/ShoppingItem.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ShoppingItem.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ShoppingItem.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ShoppingItem.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/DocumentText.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/DocumentText.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/DocumentText.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/DocumentText.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/DurationDetector.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/DurationDetector.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/DurationDetector.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/DurationDetector.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/HTMLText.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HTMLText.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HTMLText.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HTMLText.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/IngredientScaler.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/IngredientScaler.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/IngredientScaler.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/IngredientScaler.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/JSONLDRecipeParser.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/JSONLDRecipeParser.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/JSONLDRecipeParser.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/JSONLDRecipeParser.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/RecipeImporter+Files.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeImporter+Files.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeImporter+Files.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeImporter+Files.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/RecipeImporter.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeImporter.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeImporter.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeImporter.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/RecipePhotoStore.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipePhotoStore.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipePhotoStore.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipePhotoStore.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/RecipeSplitter.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeSplitter.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeSplitter.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeSplitter.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/TextRecipeParser.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TextRecipeParser.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TextRecipeParser.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TextRecipeParser.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Recipes/WebPageLoader.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/WebPageLoader.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/WebPageLoader.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/WebPageLoader.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Server/HubServer.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HubServer.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HubServer.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HubServer.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Server/SendPage.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SendPage.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SendPage.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SendPage.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/SmartHome/SceneRunner.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SceneRunner.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SceneRunner.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SceneRunner.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/SmartHome/ScenesView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ScenesView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ScenesView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ScenesView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Support/Keychain.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Keychain.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Keychain.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Keychain.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Timers/TimerStore.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TimerStore.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TimerStore.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TimerStore.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Timers/TimersView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TimersView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TimersView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/TimersView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/Components.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Components.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Components.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/Components.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/ConverterView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ConverterView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ConverterView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ConverterView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/CookModeView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/CookModeView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/CookModeView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/CookModeView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/HomeView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HomeView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HomeView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/HomeView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/RecipeDetailView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeDetailView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeDetailView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeDetailView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/RecipeListView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeListView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeListView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/RecipeListView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/SettingsView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/SettingsView.o"
+  },
+  "/Users/Test/KitchenHub/KitchenHub/Views/ShoppingListView.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ShoppingListView.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ShoppingListView.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ShoppingListView.o"
+  },
+  "/Users/Test/KitchenHub/Shared/ImportInbox.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ImportInbox.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ImportInbox.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHub.build/Objects-normal/arm64/ImportInbox.o"
+  }
+}

@@ -1,0 +1,18 @@
+"/Users/Test/KitchenHub/KitchenHub/Views/ShoppingListView.swift":
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingListView.dia"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingListView.o"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingListView.swiftconstvalues"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingListView.d"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingListView.swiftdeps"
+"/Users/Test/KitchenHub/KitchenHub/Recipes/TextRecipeParser.swift":
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/TextRecipeParser.swiftconstvalues"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/TextRecipeParser.d"
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/TextRecipeParser.dia"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/TextRecipeParser.o"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/TextRecipeParser.swiftdeps"
+"/Users/Test/KitchenHub/KitchenHub/Models/ShoppingItem.swift":
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingItem.dia"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingItem.swiftconstvalues"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingItem.o"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingItem.swiftdeps"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/ShoppingItem.d"

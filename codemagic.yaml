@@ -1,0 +1,136 @@
+# Kitchen Hub → App Store Connect / TestFlight, with automatic code signing.
+#
+# codemagic-cli-tools authenticates to App Store Connect with the "Codemagic"
+# integration below, then on every build fetches (or, with --create, makes) a
+# distribution certificate AND matching App Store provisioning profiles as a
+# set — so they can never drift apart ("Provisioning profile doesn't include
+# signing certificate").
+#
+# ONE-TIME SETUP — the "manual_code_signing" env var group must hold:
+#
+#   CERTIFICATE_PRIVATE_KEY  — a PEM RSA private key. Reuse the same value as
+#                              your other apps' Codemagic setup so the existing
+#                              "Apple Distribution: Toby Blunt" certificate is
+#                              reused instead of a new one being created.
+#
+# ALSO REQUIRED for Kitchen Hub (developer.apple.com > Identifiers) —
+# fetch-signing-files does not enable capabilities, and a profile only allows
+# what its App ID has:
+#   - com.tobyblunt.kitchenhub        needs App Groups
+#   - com.tobyblunt.kitchenhub.share  needs App Groups (the Share extension)
+#   - both App IDs must be assigned the SAME group: group.com.tobyblunt.kitchenhub
+# An app record for com.tobyblunt.kitchenhub must also exist in App Store
+# Connect (the Share extension is embedded in it and has no record of its own).
+# Put its numeric Apple ID in APP_STORE_CONNECT_APP_ID below.
+
+workflows:
+  ios-app-store:
+    name: Kitchen Hub - App Store
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+
+    integrations:
+      app_store_connect: Codemagic
+
+    environment:
+      groups:
+        - manual_code_signing   # holds CERTIFICATE_PRIVATE_KEY (see file header)
+      vars:
+        XCODE_PROJECT: "KitchenHub.xcodeproj"
+        XCODE_SCHEME: "KitchenHub"
+        # Kitchen Hub's numeric App Store Connect Apple ID
+        # (App Store Connect > your app > App Information > "Apple ID").
+        APP_STORE_CONNECT_APP_ID: "REPLACE_ME"
+        APPLE_TEAM_ID: "7KYR2X9MJA"
+        BUNDLE_ID: "com.tobyblunt.kitchenhub"
+        SHARE_BUNDLE_ID: "com.tobyblunt.kitchenhub.share"
+      xcode: latest
+
+    scripts:
+      - name: Check configuration
+        script: |
+          if [ "$APP_STORE_CONNECT_APP_ID" = "REPLACE_ME" ]; then
+            echo "Set APP_STORE_CONNECT_APP_ID in codemagic.yaml to the app's numeric Apple ID from App Store Connect."
+            exit 1
+          fi
+
+      - name: Generate Xcode project with XcodeGen
+        script: |
+          # The .xcodeproj is not committed — it is generated from project.yml (which also
+          # writes both Info.plists and both entitlements files).
+          xcodegen --version >/dev/null 2>&1 || brew install xcodegen
+          xcodegen generate --spec project.yml
+
+      - name: Fetch signing files
+        script: |
+          set -e
+          # Auth comes from the "Codemagic" App Store Connect integration. --create makes the
+          # certificate (first run only, from CERTIFICATE_PRIVATE_KEY) and/or the App Store
+          # profiles if they don't exist yet; otherwise it just downloads them.
+          # The app and its embedded Share extension are separate App IDs, so each needs its
+          # own App Store profile. Both use the same distribution certificate.
+          # --strict-match-identifier stops the app's ID also matching the extension's.
+          for id in "$BUNDLE_ID" "$SHARE_BUNDLE_ID"; do
+            app-store-connect fetch-signing-files "$id" \
+              --type IOS_APP_STORE \
+              --certificate-key "@env:CERTIFICATE_PRIVATE_KEY" \
+              --strict-match-identifier \
+              --create
+          done
+
+      - name: Add certificate to keychain
+        script: |
+          keychain initialize
+          keychain add-certificates
+
+      - name: Set up code signing for the Xcode project
+        script: |
+          # Writes each fetched profile's specifier + identity + team into the matching target
+          # (app and Share extension, matched by bundle ID) and generates
+          # ~/export_options.plist, which lists both profiles, for the -exportArchive step.
+          xcode-project use-profiles \
+            --project "$XCODE_PROJECT"
+
+      - name: Set build number
+        script: |
+          set -e
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-build-number "$APP_STORE_CONNECT_APP_ID" 2>/dev/null || echo 0)
+          BUILD_NUMBER=$(( ${LATEST_BUILD_NUMBER:-0} + 1 ))
+          echo "Using build number $BUILD_NUMBER"
+          # Both Info.plists read CFBundleVersion from $(CURRENT_PROJECT_VERSION), so passing
+          # it to xcodebuild below sets the app and extension together (they must match).
+          echo "BUILD_NUMBER=$BUILD_NUMBER" >> "$CM_ENV"
+
+      - name: Build and export IPA
+        script: |
+          set -e
+          xcodebuild \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -destination "generic/platform=iOS" \
+            -archivePath /tmp/KitchenHub.xcarchive \
+            -configuration Release \
+            archive \
+            CODE_SIGN_STYLE=Manual \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER"
+
+          xcodebuild \
+            -exportArchive \
+            -archivePath /tmp/KitchenHub.xcarchive \
+            -exportPath /tmp/KitchenHubExport \
+            -exportOptionsPlist "$HOME/export_options.plist"
+
+    artifacts:
+      - /tmp/KitchenHubExport/*.ipa
+      - /tmp/KitchenHub.xcarchive
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        # Uploading is enough for TestFlight internal testing: once processed, the build
+        # appears in TestFlight for your App Store Connect team. submit_to_testflight is
+        # only needed for external testers (it triggers Beta App Review).
+        submit_to_testflight: false
+        submit_to_app_store: false

@@ -1,0 +1,18 @@
+"/Users/Test/KitchenHub/KitchenHub/Recipes/RecipeSplitter.swift":
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RecipeSplitter.dia"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RecipeSplitter.swiftdeps"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RecipeSplitter.o"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RecipeSplitter.swiftconstvalues"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RecipeSplitter.d"
+"/Users/Test/KitchenHub/KitchenHub/App/RootView.swift":
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RootView.swiftconstvalues"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RootView.o"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RootView.swiftdeps"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RootView.d"
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/RootView.dia"
+"/Users/Test/KitchenHub/KitchenHub/SmartHome/SceneRunner.swift":
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/SceneRunner.dia"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/SceneRunner.swiftconstvalues"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/SceneRunner.o"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/SceneRunner.d"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/SceneRunner.swiftdeps"

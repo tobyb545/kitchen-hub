@@ -1,0 +1,28 @@
+{
+  "" : {
+    "diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/KitchenHubShare-master.dia",
+    "emit-module-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/KitchenHubShare-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/KitchenHubShare-master-emit-module.dia",
+    "swift-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/KitchenHubShare-master.swiftdeps"
+  },
+  "/Users/Test/KitchenHub/KitchenHubShare/ShareViewController.swift" : {
+    "const-values" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.swiftconstvalues",
+    "dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.d",
+    "diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.dia",
+    "index-unit-output-path" : "/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.o",
+    "swift-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController.swiftdeps",
+    "swiftmodule" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ShareViewController~partial.swiftmodule"
+  },
+  "/Users/Test/KitchenHub/Shared/ImportInbox.swift" : {
+    "const-values" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.swiftconstvalues",
+    "dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.d",
+    "diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.dia",
+    "index-unit-output-path" : "/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.o",
+    "swift-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox.swiftdeps",
+    "swiftmodule" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHubShare.build/Objects-normal/x86_64/ImportInbox~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'KitchenHub' in project 'KitchenHub'
+➜ Explicit dependency on target 'KitchenHubShare' in project 'KitchenHub'
+Target 'KitchenHubShare' in project 'KitchenHub' (no dependencies)

@@ -1,0 +1,18 @@
+"/Users/Test/KitchenHub/KitchenHub/Recipes/HTMLText.swift":
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/HTMLText.o"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/HTMLText.swiftdeps"
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/HTMLText.dia"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/HTMLText.swiftconstvalues"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/HTMLText.d"
+"/Users/Test/KitchenHub/KitchenHub/Recipes/DurationDetector.swift":
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DurationDetector.d"
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DurationDetector.dia"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DurationDetector.swiftconstvalues"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DurationDetector.swiftdeps"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DurationDetector.o"
+"/Users/Test/KitchenHub/KitchenHub/Recipes/DocumentText.swift":
+  diagnostics: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DocumentText.dia"
+  const-values: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DocumentText.swiftconstvalues"
+  object: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DocumentText.o"
+  dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DocumentText.d"
+  swift-dependencies: "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Debug-iphonesimulator/KitchenHub.build/Objects-normal/x86_64/DocumentText.swiftdeps"

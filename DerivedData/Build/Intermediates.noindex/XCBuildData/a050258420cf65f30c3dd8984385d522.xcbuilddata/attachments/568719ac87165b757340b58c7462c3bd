@@ -1,0 +1,20 @@
+{
+  "" : {
+    "const-values" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/KitchenHubShare-master.swiftconstvalues",
+    "dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/KitchenHubShare-master.d",
+    "diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/KitchenHubShare-master.dia",
+    "emit-module-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/KitchenHubShare-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/KitchenHubShare-master-emit-module.dia",
+    "swift-dependencies" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/KitchenHubShare-master.swiftdeps"
+  },
+  "/Users/Test/KitchenHub/KitchenHubShare/ShareViewController.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/ShareViewController.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/ShareViewController.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/ShareViewController.o"
+  },
+  "/Users/Test/KitchenHub/Shared/ImportInbox.swift" : {
+    "index-unit-output-path" : "/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/ImportInbox.o",
+    "llvm-bc" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/ImportInbox.bc",
+    "object" : "/Users/Test/KitchenHub/DerivedData/Build/Intermediates.noindex/KitchenHub.build/Release-iphoneos/KitchenHubShare.build/Objects-normal/arm64/ImportInbox.o"
+  }
+}
