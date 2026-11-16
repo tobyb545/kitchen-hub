@@ -9,6 +9,9 @@ enum SettingsKey {
     static let serverEnabled = "serverEnabled"
     static let serverPort = "serverPort"
     static let seededScenes = "seededScenes"
+    // Recipe display units, remembered across recipes (UnitConverter.Measures / .Temperature).
+    static let recipeMeasures = "recipeMeasures"
+    static let recipeTemperature = "recipeTemperature"
 }
 
 struct Toast: Identifiable, Equatable {

@@ -13,9 +13,16 @@ struct RecipeDetailView: View {
     @State private var cooking = false
     @State private var editing = false
     @State private var confirmDelete = false
+    @AppStorage(SettingsKey.recipeMeasures) private var measures: UnitConverter.Measures = .original
+    @AppStorage(SettingsKey.recipeTemperature) private var temperature: UnitConverter.Temperature = .original
 
     private var baseServings: Int { recipe.servings ?? 0 }
     private var factor: Double { baseServings > 0 && servings > 0 ? Double(servings) / Double(baseServings) : 1 }
+
+    /// An ingredient line as shown: scaled for servings, then converted to the chosen units.
+    private func display(ingredient text: String) -> String {
+        UnitConverter.convertIngredient(IngredientScaler.scale(text, by: factor), measures: measures, temperature: temperature)
+    }
 
     var body: some View {
         ScrollView {
@@ -95,6 +102,8 @@ struct RecipeDetailView: View {
                     if let t = recipe.displayTotalMinutes { MetaPill(symbol: "clock", text: "Total \(t.minutesText)") }
                     if let y = recipe.yieldText, recipe.servings == nil { MetaPill(symbol: "person.2", text: y) }
                 }
+                UnitsControls(measures: $measures, temperature: $temperature,
+                              showTemperature: UnitConverter.containsTemperature((recipe.steps + recipe.ingredients).map(\.text)))
                 Spacer(minLength: 0)
                 Button {
                     recipe.lastCookedAt = Date()
@@ -137,7 +146,7 @@ struct RecipeDetailView: View {
                             HStack(alignment: .firstTextBaseline, spacing: 12) {
                                 Image(systemName: checked.contains(line.id) ? "checkmark.circle.fill" : "circle")
                                     .foregroundStyle(checked.contains(line.id) ? Color.accentColor : Color.secondary)
-                                Text(IngredientScaler.scale(line.text, by: factor))
+                                Text(display(ingredient: line.text))
                                     .strikethrough(checked.contains(line.id))
                                     .foregroundStyle(checked.contains(line.id) ? .secondary : .primary)
                                     .multilineTextAlignment(.leading)
@@ -171,7 +180,7 @@ struct RecipeDetailView: View {
                             .background(Color.accentColor.opacity(0.15), in: Circle())
                             .foregroundStyle(Color.accentColor)
                         VStack(alignment: .leading, spacing: 8) {
-                            Text(step.text).font(.title3)
+                            Text(UnitConverter.convertTemperatures(in: step.text, to: temperature)).font(.title3)
                             let durations = DurationDetector.matches(in: step.text)
                             if !durations.isEmpty {
                                 HStack { ForEach(durations) { TimerChip(match: $0, label: "\(recipe.title) · step \(index + 1)") } }
@@ -184,9 +193,43 @@ struct RecipeDetailView: View {
     }
 
     private func addMissingToShopping() {
-        let lines = recipe.ingredients.filter { !checked.contains($0.id) }.map { IngredientScaler.scale($0.text, by: factor) }
+        let lines = recipe.ingredients.filter { !checked.contains($0.id) }.map { display(ingredient: $0.text) }
         guard !lines.isEmpty else { return }
         hub.addToShoppingList(lines, from: recipe.title)
+    }
+}
+
+/// "Measures: As written | Cups | Grams" and "Oven: As written | °F | °C" segmented controls.
+struct UnitsControls: View {
+    @Binding var measures: UnitConverter.Measures
+    @Binding var temperature: UnitConverter.Temperature
+    var showTemperature = true
+
+    var body: some View {
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 20) { measuresPicker; if showTemperature { temperaturePicker } }
+            VStack(alignment: .leading, spacing: 10) { measuresPicker; if showTemperature { temperaturePicker } }
+        }
+    }
+
+    private var measuresPicker: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "scalemass").foregroundStyle(.secondary)
+            Picker("Measures", selection: $measures) {
+                ForEach(UnitConverter.Measures.allCases) { Text($0.label).tag($0) }
+            }
+            .pickerStyle(.segmented).fixedSize()
+        }
+    }
+
+    private var temperaturePicker: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "thermometer.medium").foregroundStyle(.secondary)
+            Picker("Oven temperature", selection: $temperature) {
+                ForEach(UnitConverter.Temperature.allCases) { Text($0.label).tag($0) }
+            }
+            .pickerStyle(.segmented).fixedSize()
+        }
     }
 }
 

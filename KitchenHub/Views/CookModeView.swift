@@ -9,6 +9,8 @@ struct CookModeView: View {
 
     @State private var stepIndex = 0
     @State private var showIngredients = true
+    @AppStorage(SettingsKey.recipeMeasures) private var measures: UnitConverter.Measures = .original
+    @AppStorage(SettingsKey.recipeTemperature) private var temperature: UnitConverter.Temperature = .original
 
     private var steps: [RecipeLine] { recipe.steps }
 
@@ -35,6 +37,16 @@ struct CookModeView: View {
                     Button { dismiss() } label: { Label("Done", systemImage: "xmark") }
                 }
                 ToolbarItem(placement: .primaryAction) {
+                    Menu {
+                        Picker("Measures", selection: $measures) {
+                            ForEach(UnitConverter.Measures.allCases) { Text($0.label).tag($0) }
+                        }
+                        Picker("Oven temperature", selection: $temperature) {
+                            ForEach(UnitConverter.Temperature.allCases) { Text($0 == .original ? "Oven: as written" : "Oven \($0.label)").tag($0) }
+                        }
+                    } label: { Label("Units", systemImage: "scalemass") }
+                }
+                ToolbarItem(placement: .primaryAction) {
                     Button { withAnimation { showIngredients.toggle() } } label: {
                         Label("Ingredients", systemImage: "sidebar.left")
                     }
@@ -53,7 +65,7 @@ struct CookModeView: View {
                                 .font(.title3.weight(.semibold)).foregroundStyle(Color.accentColor)
                             if let s = step.section { Text("· \(s)").font(.title3).foregroundStyle(.secondary) }
                         }
-                        Text(step.text)
+                        Text(UnitConverter.convertTemperatures(in: step.text, to: temperature))
                             .font(.system(size: 38, weight: .medium))
                             .lineSpacing(8)
                             .fixedSize(horizontal: false, vertical: true)
@@ -113,7 +125,8 @@ struct CookModeView: View {
                     ForEach(group.lines) { line in
                         HStack(alignment: .firstTextBaseline, spacing: 8) {
                             Text("•").foregroundStyle(Color.accentColor)
-                            Text(IngredientScaler.scale(line.text, by: factor))
+                            Text(UnitConverter.convertIngredient(IngredientScaler.scale(line.text, by: factor),
+                                                                 measures: measures, temperature: temperature))
                         }
                         .font(.title3)
                     }
