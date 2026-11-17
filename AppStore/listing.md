@@ -84,4 +84,16 @@ Answer **"No, we do not collect data from this app."** Kitchen Hub has no accoun
 ## Screenshots
 
 In `AppStore/screenshots/`: 2752 × 2064 (13-inch iPad, landscape), which App Store Connect also uses for smaller iPads.
-Upload the `framed/` versions (with captions) in order 01–06; `raw/` holds the plain captures.
+Upload the `framed/` versions (with captions) in order 01–08; `raw/` holds the plain captures.
+
+1. Your kitchen, at a glance (Home)
+2. Import recipes from anywhere (Add recipe: link, scan, photos)
+3. Send it from your phone (iPhone send page + recipe arriving on the iPad)
+4. Any recipe, beautifully tidy
+5. Cook step by step
+6. Cups or grams? °F or °C?
+7. Timers you won't miss
+8. Never forget the lemons (shopping list)
+
+To regenerate: run a Debug build in the "Screenshots iPad 13" simulator with `-screenshotSeed`
+(see `KitchenHub/Support/ScreenshotSeed.swift`), capture, then `python3 AppStore/frame_screenshots.py`.

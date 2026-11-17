@@ -34,6 +34,8 @@ final class HubModel {
     var toast: Toast?
     /// Set by a kitchenhub://scene/<name> link; RootView runs it.
     var pendingSceneName: String?
+    /// Set by kitchenhub://add?draft=…: opens the Add recipe screen with this text filled in.
+    var addRecipeDraft: String?
     private(set) var importsInFlight = 0
 
     let server = HubServer()
@@ -171,6 +173,12 @@ final class HubModel {
     func recipe(titled title: String) -> Recipe? {
         let all = (try? context.fetch(FetchDescriptor<Recipe>())) ?? []
         return all.first { $0.title.caseInsensitiveCompare(title) == .orderedSame }
+    }
+
+    func openAddRecipe(draft: String) {
+        selectedTab = .recipes
+        recipePath = []
+        addRecipeDraft = draft
     }
 
     func latestRecipe() -> Recipe? {

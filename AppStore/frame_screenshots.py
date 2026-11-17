@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Adds a caption and background to each raw App Store screenshot.
+NN-name-phone.png, if present, is shown as an iPhone in front of NN-name.png.
 
 Usage: python3 AppStore/frame_screenshots.py
 Reads AppStore/screenshots/raw/NN-name.png (2752x2064), writes AppStore/screenshots/framed/.
@@ -14,12 +15,13 @@ W, H = 2752, 2064
 
 CAPTIONS = {
     "01-home": ("Your kitchen, at a glance", "Recipes, timers and scenes on one screen"),
-    "02-recipe": ("Any recipe, beautifully tidy", "Just the ingredients and method. No life story"),
-    "03-cook": ("Cook step by step", "Big text you can read from across the room"),
-    "04-units": ("Cups or grams? °F or °C?", "Switch any recipe to the units you use"),
-    "05-timers": ("Timers you won't miss", "Run several at once, with a loud alarm"),
-    "06-shopping": ("Never forget the lemons", "Send what you're missing to the shopping list"),
-    "07-welcome": ("Send recipes from anywhere", "Links, the Share menu, AirDrop, photos or Wi-Fi"),
+    "02-import": ("Import recipes from anywhere", "Paste a link, scan a cookbook or add screenshots"),
+    "03-send": ("Send it from your phone", "Over Wi-Fi, from any browser. No app needed"),
+    "04-recipe": ("Any recipe, beautifully tidy", "Just the ingredients and method. No life story"),
+    "05-cook": ("Cook step by step", "Big text you can read from across the room"),
+    "06-units": ("Cups or grams? °F or °C?", "Switch any recipe to the units you use"),
+    "07-timers": ("Timers you won't miss", "Run several at once, with a loud alarm"),
+    "08-shopping": ("Never forget the lemons", "Send what you're missing to the shopping list"),
 }
 
 TOP = (252, 236, 222)      # warm cream
@@ -60,7 +62,25 @@ def rounded(img, radius):
     return out
 
 
-def frame(name, shot):
+def add_phone(canvas, phone, ipad_box):
+    """Places an iPhone screenshot in front of the iPad's lower-right corner."""
+    x0, y0, x1, y1 = ipad_box
+    ph_h = 1500
+    ph_w = int(phone.width * ph_h / phone.height)
+    screen = rounded(phone.resize((ph_w, ph_h), Image.LANCZOS), 70)
+    bez = 22
+    px, py = x1 - ph_w + 60, y1 - ph_h + 40
+    shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rounded_rectangle([px - bez, py - bez + 30, px + ph_w + bez, py + ph_h + bez + 30], 92, fill=(60, 25, 5, 140))
+    canvas = Image.alpha_composite(canvas, shadow.filter(ImageFilter.GaussianBlur(36)))
+    body = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    ImageDraw.Draw(body).rounded_rectangle([px - bez, py - bez, px + ph_w + bez, py + ph_h + bez], 92, fill=(28, 28, 30, 255))
+    canvas = Image.alpha_composite(canvas, body)
+    canvas.alpha_composite(screen, (px, py))
+    return canvas
+
+
+def frame(name, shot, phone=None):
     title, sub = CAPTIONS.get(name, (name, ""))
     canvas = background().convert("RGBA")
     d = ImageDraw.Draw(canvas)
@@ -81,18 +101,23 @@ def frame(name, shot):
     ImageDraw.Draw(bezel).rounded_rectangle([x - 14, y - 14, x + shot_w + 14, y + shot_h + 14], 56, fill=(28, 28, 30, 255))
     canvas = Image.alpha_composite(canvas, bezel)
     canvas.alpha_composite(s, (x, y))
+    if phone is not None:
+        canvas = add_phone(canvas, phone, (x, y, x + shot_w, y + shot_h))
     return canvas.convert("RGB")
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
     for f in sorted(os.listdir(RAW)):
-        if not f.endswith(".png"):
+        if not f.endswith(".png") or f.endswith("-phone.png"):
             continue
         shot = Image.open(os.path.join(RAW, f)).convert("RGB")
         if shot.size != (W, H):
             print(f"warning: {f} is {shot.size}, expected {(W, H)}")
-        out = frame(os.path.splitext(f)[0], shot)
+        name = os.path.splitext(f)[0]
+        phone_path = os.path.join(RAW, name + "-phone.png")
+        phone = Image.open(phone_path).convert("RGB") if os.path.exists(phone_path) else None
+        out = frame(name, shot, phone)
         out.save(os.path.join(OUT, f), optimize=True)
         print("framed", f)
 

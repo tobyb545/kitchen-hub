@@ -70,6 +70,9 @@ enum SendPage {
     </main>
     <script>
     const statusEl = document.getElementById('status');
+    // ?url=… pre-fills the link box (handy for bookmarks and Shortcuts).
+    const preset = new URLSearchParams(location.search).get('url');
+    if (preset) document.getElementById('url').value = preset;
     function show(msg, cls) { statusEl.textContent = msg; statusEl.className = cls || ''; }
     async function pasteInto(id) {
       try { document.getElementById(id).value = await navigator.clipboard.readText(); } catch (e) { show('Long-press the box and choose Paste.', ''); }

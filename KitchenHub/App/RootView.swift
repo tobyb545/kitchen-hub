@@ -36,6 +36,9 @@ struct RootView: View {
             if args.contains("-screenshotSeed") {
                 hub.seedScreenshotData(timers: timers)
                 hasSeenOnboarding = !args.contains("-showOnboarding")
+                if let title = UserDefaults.standard.string(forKey: "debugToastRecipe"), let r = hub.recipe(titled: title) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { hub.announce([r]) }
+                }
             }
             #endif
             if !hasSeenOnboarding { showingOnboarding = true }
@@ -78,7 +81,7 @@ struct RootView: View {
     }
 
     /// kitchenhub://tab/timers · kitchenhub://recipe/latest · kitchenhub://recipe/<uuid or title>
-    /// kitchenhub://add?url=<link> · kitchenhub://timer?minutes=10&label=Pasta · kitchenhub://scene/<name>
+    /// kitchenhub://add?url=<link> (imports) · kitchenhub://add?draft=<text> (opens Add recipe) · kitchenhub://timer?minutes=10&label=Pasta · kitchenhub://scene/<name>
     private func handle(_ url: URL) {
         if url.isFileURL {
             // A file AirDropped to the iPad or sent with "Open in Kitchen Hub". iOS copies it into
@@ -105,6 +108,8 @@ struct RootView: View {
         case "add":
             if let input = query["url"] ?? query["text"] {
                 Task { _ = try? await hub.receiveRecipe(input) }
+            } else {
+                hub.openAddRecipe(draft: query["draft"] ?? "")
             }
         case "timer":
             if let m = Double(query["minutes"] ?? "") {

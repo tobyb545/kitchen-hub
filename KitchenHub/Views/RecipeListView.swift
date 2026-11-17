@@ -65,7 +65,11 @@ struct RecipeListView: View {
                     ContentUnavailableView("Recipe not found", systemImage: "questionmark")
                 }
             }
-            .sheet(isPresented: $showingAdd) { AddRecipeView() }
+            .sheet(isPresented: $showingAdd, onDismiss: { hub.addRecipeDraft = nil }) {
+                AddRecipeView(initialInput: hub.addRecipeDraft ?? "")
+            }
+            .onAppear { if hub.addRecipeDraft != nil { showingAdd = true } }
+            .onChange(of: hub.addRecipeDraft) { _, draft in if draft != nil { showingAdd = true } }
         }
     }
 }
@@ -107,8 +111,16 @@ struct RecipeCard: View {
 }
 
 struct AddRecipeView: View {
+    #if DEBUG
+    /// The simulator has no document camera; show the row in App Store screenshots as on an iPad.
+    static let screenshotRun = ProcessInfo.processInfo.arguments.contains("-screenshotSeed")
+    #else
+    static let screenshotRun = false
+    #endif
+
     @Environment(HubModel.self) private var hub
     @Environment(\.dismiss) private var dismiss
+    var initialInput = ""
     @State private var input = ""
     @State private var working = false
     @State private var error: String?
@@ -139,7 +151,7 @@ struct AddRecipeView: View {
                 }
 
                 Section {
-                    if VNDocumentCameraViewController.isSupported {
+                    if VNDocumentCameraViewController.isSupported || Self.screenshotRun {
                         Button { scanning = true } label: {
                             Label("Scan a cookbook page or recipe card", systemImage: "doc.viewfinder")
                         }
@@ -165,6 +177,7 @@ struct AddRecipeView: View {
                         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
                 }
             }
+            .onAppear { if input.isEmpty { input = initialInput } }
             .navigationTitle("Add recipe")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
