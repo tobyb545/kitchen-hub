@@ -34,8 +34,13 @@ def font(path, size, index=0):
         return ImageFont.load_default()
 
 
-TITLE = font("/System/Library/Fonts/NewYork.ttf", 124)
+TITLE = font("/System/Library/Fonts/NewYork.ttf", 120)
 SUB = font("/System/Library/Fonts/SFNS.ttf", 60)
+for f, weight in ((TITLE, b"Bold"), (SUB, b"Medium")):
+    try:
+        f.set_variation_by_name(weight)  # variable fonts default to their thinnest style
+    except Exception:
+        pass
 
 
 def background():

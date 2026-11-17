@@ -31,7 +31,9 @@ struct RecipeDetailView: View {
                 ViewThatFits(in: .horizontal) {
                     HStack(alignment: .top, spacing: 24) {
                         ingredientsCard.frame(width: 380)
-                        methodCard
+                        // Without an ideal width, long steps report a huge ideal size and
+                        // ViewThatFits falls back to the stacked layout even on a wide iPad.
+                        methodCard.frame(minWidth: 420, idealWidth: 520, maxWidth: .infinity)
                     }
                     VStack(spacing: 24) { ingredientsCard; methodCard }
                 }

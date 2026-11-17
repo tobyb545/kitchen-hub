@@ -41,7 +41,12 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         let center = UNUserNotificationCenter.current()
         center.delegate = self
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in }
+        #if DEBUG
+        let screenshotRun = ProcessInfo.processInfo.arguments.contains("-screenshotSeed")
+        #else
+        let screenshotRun = false
+        #endif
+        if !screenshotRun { center.requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in } }
         return true
     }
 

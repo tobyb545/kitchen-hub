@@ -168,6 +168,11 @@ final class HubModel {
         return try? context.fetch(d).first
     }
 
+    func recipe(titled title: String) -> Recipe? {
+        let all = (try? context.fetch(FetchDescriptor<Recipe>())) ?? []
+        return all.first { $0.title.caseInsensitiveCompare(title) == .orderedSame }
+    }
+
     func latestRecipe() -> Recipe? {
         var d = FetchDescriptor<Recipe>(sortBy: [SortDescriptor(\.createdAt, order: .reverse)])
         d.fetchLimit = 1

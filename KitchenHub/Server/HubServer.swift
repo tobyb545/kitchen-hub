@@ -32,6 +32,10 @@ final class HubServer {
 
     var address: String? {
         guard state == .running, let ip = NetworkInfo.wifiIPv4() else { return nil }
+        #if DEBUG
+        // App Store screenshots shouldn't show the real network address.
+        if ProcessInfo.processInfo.arguments.contains("-screenshotSeed") { return "http://192.168.1.20:\(port)" }
+        #endif
         return "http://\(ip):\(port)"
     }
 

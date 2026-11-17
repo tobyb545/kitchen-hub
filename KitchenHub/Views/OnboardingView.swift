@@ -85,6 +85,9 @@ struct OnboardingView: View {
             .padding(.bottom, 48)
         }
         .background(Color(.systemBackground))
+        #if DEBUG
+        .onAppear { page = UserDefaults.standard.integer(forKey: "onboardingPage") }  // screenshot aid
+        #endif
     }
 
     private func slideView(_ slide: Slide) -> some View {

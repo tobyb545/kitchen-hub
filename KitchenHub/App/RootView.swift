@@ -77,7 +77,7 @@ struct RootView: View {
         .onChange(of: keepAwake) { _, _ in applyPhase(scenePhase) }
     }
 
-    /// kitchenhub://tab/timers · kitchenhub://recipe/latest · kitchenhub://recipe/<uuid>
+    /// kitchenhub://tab/timers · kitchenhub://recipe/latest · kitchenhub://recipe/<uuid or title>
     /// kitchenhub://add?url=<link> · kitchenhub://timer?minutes=10&label=Pasta · kitchenhub://scene/<name>
     private func handle(_ url: URL) {
         if url.isFileURL {
@@ -101,6 +101,7 @@ struct RootView: View {
         case "recipe":
             if parts.first == "latest", let r = hub.latestRecipe() { hub.open(recipeID: r.id) }
             else if let id = parts.first.flatMap(UUID.init(uuidString:)) { hub.open(recipeID: id) }
+            else if let title = parts.first, let r = hub.recipe(titled: title) { hub.open(recipeID: r.id) }
         case "add":
             if let input = query["url"] ?? query["text"] {
                 Task { _ = try? await hub.receiveRecipe(input) }
