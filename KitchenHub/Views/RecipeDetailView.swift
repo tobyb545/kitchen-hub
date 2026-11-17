@@ -66,7 +66,14 @@ struct RecipeDetailView: View {
                 } label: { Label("More", systemImage: "ellipsis.circle") }
             }
         }
-        .onAppear { if servings == 0 { servings = baseServings } }
+        .onAppear {
+            if servings == 0 { servings = baseServings }
+            #if DEBUG
+            if ProcessInfo.processInfo.arguments.contains("-debugCookMode") {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { cooking = true }
+            }
+            #endif
+        }
         .fullScreenCover(isPresented: $cooking) { CookModeView(recipe: recipe, factor: factor) }
         .sheet(isPresented: $editing) { EditRecipeView(recipe: recipe) }
         .confirmationDialog("Delete “\(recipe.title)”?", isPresented: $confirmDelete, titleVisibility: .visible) {

@@ -37,7 +37,7 @@ final class HubModel {
     private(set) var importsInFlight = 0
 
     let server = HubServer()
-    @ObservationIgnored private let context: ModelContext
+    @ObservationIgnored let context: ModelContext
 
     init(context: ModelContext) {
         self.context = context

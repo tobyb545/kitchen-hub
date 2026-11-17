@@ -30,7 +30,15 @@ struct RootView: View {
         .overlay { RingingTimersOverlay() }
         .fullScreenCover(isPresented: $showingOnboarding) { OnboardingView() }
         .onAppear {
-            if !hasSeenOnboarding, !ProcessInfo.processInfo.arguments.contains("-skipOnboarding") { showingOnboarding = true }
+            #if DEBUG
+            // App Store screenshots: sample data, and skip the tour unless it's being captured.
+            let args = ProcessInfo.processInfo.arguments
+            if args.contains("-screenshotSeed") {
+                hub.seedScreenshotData(timers: timers)
+                hasSeenOnboarding = !args.contains("-showOnboarding")
+            }
+            #endif
+            if !hasSeenOnboarding { showingOnboarding = true }
             hub.server.onRecipe = { [weak hub] input in
                 guard let hub else { throw CancellationError() }
                 return try await hub.receiveRecipe(input)
