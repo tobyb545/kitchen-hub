@@ -6,6 +6,8 @@ struct RootView: View {
     @Environment(SceneRunner.self) private var sceneRunner
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(SettingsKey.keepAwake) private var keepAwake = true
+    @AppStorage(SettingsKey.hasSeenOnboarding) private var hasSeenOnboarding = false
+    @State private var showingOnboarding = false
 
     var body: some View {
         @Bindable var hub = hub
@@ -26,7 +28,9 @@ struct RootView: View {
         }
         .overlay(alignment: .top) { ToastView() }
         .overlay { RingingTimersOverlay() }
+        .fullScreenCover(isPresented: $showingOnboarding) { OnboardingView() }
         .onAppear {
+            if !hasSeenOnboarding, !ProcessInfo.processInfo.arguments.contains("-skipOnboarding") { showingOnboarding = true }
             hub.server.onRecipe = { [weak hub] input in
                 guard let hub else { throw CancellationError() }
                 return try await hub.receiveRecipe(input)

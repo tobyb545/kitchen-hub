@@ -12,6 +12,7 @@ enum SettingsKey {
     // Recipe display units, remembered across recipes (UnitConverter.Measures / .Temperature).
     static let recipeMeasures = "recipeMeasures"
     static let recipeTemperature = "recipeTemperature"
+    static let hasSeenOnboarding = "hasSeenOnboarding"
 }
 
 struct Toast: Identifiable, Equatable {

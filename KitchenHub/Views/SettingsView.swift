@@ -10,6 +10,7 @@ struct SettingsView: View {
     @State private var voiceMonkeyToken = Keychain.get(.voiceMonkeyToken)
     @State private var showingAlexaGuide = false
     @State private var showingShortcutGuide = false
+    @State private var showingOnboarding = false
     @State private var portText = ""
 
     var body: some View {
@@ -51,6 +52,7 @@ struct SettingsView: View {
                 }
 
                 Section("About") {
+                    Button("Show welcome tour") { showingOnboarding = true }
                     LabeledContent("Version", value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0")
                 }
             }
@@ -59,6 +61,7 @@ struct SettingsView: View {
             .onChange(of: serverEnabled) { _, _ in hub.updateServer(active: true) }
             .sheet(isPresented: $showingAlexaGuide) { AlexaSetupGuide() }
             .sheet(isPresented: $showingShortcutGuide) { ShortcutGuide(address: hub.server.address) }
+            .fullScreenCover(isPresented: $showingOnboarding) { OnboardingView() }
         }
     }
 
